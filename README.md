@@ -22,7 +22,7 @@ Welcome to the MERN Grocery Shop Project! This project is built using the MERN (
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/PradipKhamkar/grocery-shop.git
+   git clone https://github.com/SamruddhiBhosale/grocery-shop.git
    ```
 
 2. Change into the project directory:
@@ -50,11 +50,13 @@ Welcome to the MERN Grocery Shop Project! This project is built using the MERN (
 
    ```env
    MONGODB_URI=your_mongodb_uri
+   PORT=3000
    JWT_SECRET_KEY = jwt_secret_key
    JWT_RESET_PASSWORD_SECRET_KEY = jwt_reset_password_secret_key
    COOKIE_EXPIRE = 5
    SMPT_MAIL = smpt_mail
    SMPT_PASSWORD = smpt_password
+   **SMPT MAIL & SMPT PASSWORD comes from Google's App passwords.**
    CLOUD_NAME = your_cloudinary_cloud_name
    CLOUD_API_KEY =  your_cloudinary_api_key
    CLOUD_API_SECRET_KEY =  your_cloudinary_api_secret

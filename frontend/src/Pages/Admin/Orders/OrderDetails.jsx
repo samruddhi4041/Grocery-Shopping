@@ -34,7 +34,7 @@ const AdminOrderDetails = () => {
     if (oStatus !== "") {
       dispatch(updateOrdersAdminAction(orderId, oStatus));
     } else {
-      alert("Select Order Status..!!");
+      alert("Select Order Status.");
     }
     // console.log(oStatus);
   };
@@ -51,10 +51,10 @@ const AdminOrderDetails = () => {
       <Sidebar />
       <div className="dashboard-container">
         {orderLoading ? (
-          <Loader LoadingName={"Order Loading"} />
+          <Loader LoadingName={"Order Loading.."} />
         ) : orderError ? (
           <>
-            <NotFoundCart msg={"Something Went To Wrong"} />
+            <NotFoundCart msg={"Something Went Wrong."} />
           </>
         ) : order && order.orderItems ? (
           <>
@@ -80,7 +80,7 @@ const AdminOrderDetails = () => {
                             setOrderStatus(e.target.value);
                           }}
                         >
-                          <option value="">Update State</option>
+                          <option value="">Update Status</option>
                           {order.status === "Processing" ? (
                             <option value="Shipped">Shipped</option>
                           ) : (
@@ -129,7 +129,7 @@ const AdminOrderDetails = () => {
             </div>
           </>
         ) : (
-          <NotFoundCart msg={" Sorry Order Not Exit"} />
+          <NotFoundCart msg={" Sorry, Order Does Not Exist"} />
         )}
       </div>
     </>

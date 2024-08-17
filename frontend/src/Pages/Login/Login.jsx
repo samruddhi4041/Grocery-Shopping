@@ -95,8 +95,8 @@ const Login = () => {
                 )}
 
                 <div className="user-links">
-                  <Link to="/Forget/Password">Forget's Password</Link>
-                  <Link to="/Signup">Not A User ? Sign Up</Link>
+                  <Link to="/Forget/Password">Forgot Password?</Link>
+                  <Link to="/Signup">Not A User ? Sign Up.</Link>
                 </div>
                 <button>Login</button>
               </form>

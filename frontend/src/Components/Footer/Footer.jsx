@@ -2,7 +2,8 @@ import React from "react";
 import "./Footer.css";
 import { RiShoppingBasketFill, RiMapPin2Line } from "react-icons/ri";
 import { SlSocialInstagram } from "react-icons/sl";
-import { TiSocialTwitter, TiSocialLinkedin } from "react-icons/ti";
+import {  TiSocialLinkedin } from "react-icons/ti";
+import { AiFillGithub } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdPhoneForwarded, MdOutlineMarkEmailRead } from "react-icons/md";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -13,7 +14,7 @@ import { useState } from "react";
 const Footer = () => {
   const [message, setMessage] = useState();
   const sendMessage = () => {
-    window.location = `https://wa.me/7350403908?text=${message}`;
+    window.location = `https://wa.me/8291590374?text=${message}`;
   };
   return (
     <>
@@ -22,34 +23,35 @@ const Footer = () => {
           <div className="box-container">
             <div className="box">
               <h3>
-                Groco <i>{<RiShoppingBasketFill />}</i>
+                QuickCart <i>{<RiShoppingBasketFill />}</i>
               </h3>
               <p>
-                Fresh And Organic Delivery We Make Your Life Easy By Delivering
-                Grocery, Fruits And Dairy Products
+                Fresh And Organic Delivery.<br/><span> We Make Your Life Easy By Delivering
+                Grocery, Fruits, Dairy Products & other everyday grocery items at your doorstep.</span>
               </p>
               <div className="share">
                 <Link>
                   <i
                     onClick={() => {
-                      window.location = `https://wa.me/7350403908?text=Say Hello..!!`;
+                      window.location = `https://wa.me/8291590374?text=Say Hello..!!`;
                     }}
                   >
                     {<IoLogoWhatsapp />}
                   </i>
                 </Link>
-                <a href="https://instagram.com/khamkar_pradip25">
+                <a href="https://instagram.com/damn_sam_404">
                   <i>{<SlSocialInstagram />}</i>
                 </a>
-                <Link to="#">
-                  <i>{<TiSocialTwitter />}</i>
-                </Link>
-                <Link>
-                  <i>{<TiSocialLinkedin />}</i>
-                </Link>
+             
+                <a href="https://github.com/samruddhi4040">
+                  <i>{ <AiFillGithub />}</i></a>
+               
+                <a href="https://www.linkedin.com/in/samruddhi-bhosale-73567926a/">
+                  <i>{<TiSocialLinkedin />}</i></a>
+         
               </div>
             </div>
-
+      
             {/* Contact Section */}
 
             <div className="box">
@@ -58,21 +60,21 @@ const Footer = () => {
                 <i>
                   <MdPhoneForwarded />
                 </i>
-                +91 7350403908
+                +91 1234567890
               </Link>
 
-              <a href="mailto:khamkarpradip20@gmail.com" className="links">
+              <a href="mailto:samruddhi4040@gmail.com" className="links">
                 <i>
                   <MdOutlineMarkEmailRead />
                 </i>
-                khamkarpradip20@gmail.com
+                samruddhi4040@gmail.com
               </a>
 
               <Link className="links">
                 <i>
                   <RiMapPin2Line />
                 </i>
-                Pune , India -413728
+                Mumbai , India -400001
               </Link>
             </div>
 
@@ -110,7 +112,7 @@ const Footer = () => {
             </div>
             {/* Quick Chat */}
             <div className="box">
-              <h3>Let's Chats </h3>
+              <h3>Let's Chat </h3>
               <p>Type Message..!!</p>
               <input
                 type="text"
@@ -126,7 +128,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="credit">
-            Created By <span>Pradip Khamkar </span> | All Right Reserved
+            Created By <span>Samruddhi Bhosale </span> | All Rights Reserved
           </div>
         </section>
       </footer>

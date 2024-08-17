@@ -31,7 +31,7 @@ const addProduct = async (req, res) => {
 
       res.status(201).json({
         success: true,
-        message: "Product Add SuccessFully..!!",
+        message: "Product Added SuccessFully..!!",
         newProduct,
       });
     }
@@ -44,7 +44,7 @@ const addProduct = async (req, res) => {
       sendError(res, 400, Object.values(errors));
     } else {
       console.log(error);
-      sendError(res, 400, ["Somethings Went Wrong..!!"]);
+      sendError(res, 400, ["Something Went Wrong."]);
     }
   }
 };
@@ -62,14 +62,14 @@ const deleteProduct = async (req, res) => {
           .populate("category");
         res.status(200).json({
           success: true,
-          message: "Product Delete SuccessFully..!!",
+          message: "Product Deleted SuccessFully.",
           DeletedProduct,
         });
       } else {
-        sendError(res, 400, "Product Not Found");
+        sendError(res, 400, "Product Not Found.");
       }
     } else {
-      sendError(res, 400, "Product Id Not Found");
+      sendError(res, 400, "Product Id Not Found.");
     }
   } catch (error) {
     sendError(res, 400, error.message);
@@ -98,7 +98,7 @@ const updateProduct = async (req, res) => {
         await isProductExit.save();
         res.status(200).json({
           success: true,
-          message: "Product Updated..!!",
+          message: "Product Updated.",
         });
       } else {
         isProductExit.name = name;
@@ -109,11 +109,11 @@ const updateProduct = async (req, res) => {
         await isProductExit.save();
         res.status(200).json({
           success: true,
-          message: "Product Updated..!!",
+          message: "Product Updated.",
         });
       }
     } else {
-      sendError(res, 400, "Product Id Not Found");
+      sendError(res, 400, "Product Id Not Found.");
     }
   } catch (error) {
     console.log(error);
@@ -129,7 +129,7 @@ const getAllProduct = async (req, res) => {
     const products = await queryStr.populate("category");
     res.status(200).json({
       success: true,
-      message: "Product Retrieve SuccessFully..!!",
+      message: "Product Retrieved SuccessFully.",
       products,
       productsDocCount,
     });
@@ -148,7 +148,7 @@ const getRecentProducts = async (req, res) => {
       products,
     });
   } catch (error) {
-    sendError(res, 400, "Something Is Wrong..!!");
+    sendError(res, 400, "Something Is Wrong.");
   }
 };
 
@@ -164,18 +164,18 @@ const getSingleProduct = async (req, res) => {
       if (product) {
         res.status(200).json({
           success: true,
-          message: "Product Retrieve SuccessFully..!!",
+          message: "Product Retrieved SuccessFully.",
           product,
         });
       } else {
-        sendError(res, 400, "Product Not Found..!!");
+        sendError(res, 400, "Product Not Found.");
       }
     } else {
-      sendError(res, 400, "Product Id Not Found");
+      sendError(res, 400, "Product Id Not Found.");
     }
   } catch (error) {
     console.log(error.message);
-    sendError(res, 400, "Somethings Is Wrong..!!");
+    sendError(res, 400, "Something Is Wrong.");
   }
 };
 

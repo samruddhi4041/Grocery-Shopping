@@ -32,7 +32,7 @@ const OrderDetails = () => {
         <Loader LoadingName={"Order Loading"} />
       ) : orderError ? (
         <>
-          <NotFoundCart msg={"Something Went To Wrong"} />
+          <NotFoundCart msg={"Something Went Wrong"} />
         </>
       ) : order && order.orderItems ? (
         <>
@@ -81,7 +81,7 @@ const OrderDetails = () => {
           </div>
         </>
       ) : (
-        <NotFoundCart msg={" Sorry Order Not Exit"} />
+        <NotFoundCart msg={" Sorry, Order Does Not Exist"} />
       )}
 
       <Footer />

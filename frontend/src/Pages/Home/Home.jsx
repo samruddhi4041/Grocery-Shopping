@@ -110,9 +110,7 @@ const Home = () => {
                   Fresh And <span>Organic</span> Products For You
                 </h3>
                 <p>
-                  We respect your taste and tradition and so we are proud to say
-                  that we are a local company. We do not sell products which are
-                  of low quality but highly priced.
+                  Have the luxury of having your everyday groceries right at your doorsteps within a click.
                 </p>
                 <Link to="/products">
                   {" "}
@@ -133,10 +131,7 @@ const Home = () => {
                 <img src={featureImg1} alt="" />
                 <h3>Fresh And Organic</h3>
                 <p>
-                  Fresh And Organic Delivery We Make Your Life Easy By
-                  Delivering Grocery, Fruits And Dairy Products Well Have All
-                  Single Platform And Are Committed To Serving You With Best
-                  Quality Products
+                Delivering fresh, organic products.<br/> Simplifying your life with groceries, fruits, dairy, and other daily essentials.<br/> Offering a unified platform. Committed to top-quality service.
                 </p>
               </div>
 
@@ -145,8 +140,8 @@ const Home = () => {
                 <h3>Free Delivery</h3>
                 <p>
                   {" "}
-                  We Are Doing FREE Shipping All Over India Add Your Favorites
-                  Products To Cart And Enjoy Assured Low Price Delivery
+                  We Are Doing FREE Shipping All Over India.<br/><span> Add Your Favorite
+                  Products To Cart And Enjoy Assured Low Price Delivery.</span>
                 </p>
               </div>
 
@@ -154,7 +149,7 @@ const Home = () => {
                 <img src={featureImg3} alt="" />
                 <h3>Cash On Delivery</h3>
                 <p>
-                  We Offer Cash On Delivery...!! <br /> You Can Pay When Your
+                  We Offer Cash On Delivery. <br /> You Can Pay When Your
                   Products Is Delivered.
                 </p>
               </div>

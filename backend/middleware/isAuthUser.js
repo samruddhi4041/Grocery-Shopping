@@ -18,7 +18,7 @@ const isAuthUser = async (req, res, next) => {
       sendError(res, 400, "");
     }
   } catch (error) {
-    sendError(res, 400, "Token Not Found..!!");
+    sendError(res, 400, "Token Not Found.");
   }
 };
 

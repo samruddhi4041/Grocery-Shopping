@@ -30,6 +30,20 @@
   margin: auto;
   margin-top: 1.5rem;
 }
+.about-section-box > div > div > .button-container {
+  margin: 1rem 0;
+}
+
+.about-section-box > div > div > .button-container > button {
+  padding: 1rem;
+  background-color: tomato;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.7rem !important;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
 
 .about-section-box > div > div > button {
   margin: 1rem 0;
@@ -42,11 +56,10 @@
   font-size: 1.7rem !important;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
-.about-section-box > div > div > button:hover {
+.about-section-box > div > div > .button-container > button:hover {
   background-color: var(--bs-success);
   color: #fff;
 }
-
 /* Media Queries */
 @media (max-width: 991px) {
 }
@@ -60,3 +73,13 @@
     width: 90%;
   }
 }
+/*
+
+
+  .about-section-box > div > div > button:hover {
+  background-color: var(--bs-success);
+  color: #fff;
+}
+
+}
+*/

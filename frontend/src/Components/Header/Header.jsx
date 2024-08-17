@@ -28,7 +28,7 @@ const Header = () => {
 
   useEffect(() => {
     if (logOutSuccess) {
-      alert("Logout Success..!!");
+      alert("Logout Success.");
       window.location.reload();
     }
   }, [cartItems, logOutSuccess]);
@@ -103,7 +103,7 @@ const Header = () => {
       <header className="header">
         <Link to="/" className="logo">
           {<RiShoppingBasketFill />} {""}
-          Grocery
+          QuickCart
         </Link>
         <nav className="navbar-section" ref={navbar}>
           <Link to="/">Home</Link>
@@ -138,7 +138,7 @@ const Header = () => {
           <input
             type="search"
             id="search-box"
-            placeholder="Search Here...!!"
+            placeholder="Search Here."
             onChange={(e) => setKeyword(e.target.value)}
           />
           <button htmlFor="search-box">

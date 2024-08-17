@@ -13,7 +13,7 @@ const userRegister = async (req, res) => {
     if (isUserExit) {
       res.status(400).json({
         success: false,
-        message: ["Oops! Email Already Exit..!!"],
+        message: ["Oops! Email Already Exists."],
       });
     } else {
       if (password == confirmPassword) {
@@ -28,7 +28,7 @@ const userRegister = async (req, res) => {
         await NewUser.save();
         res.status(201).json({
           success: true,
-          message: "User Register SuccessFully..!!",
+          message: "User Registered SuccessFully.",
           NewUser,
         });
       } else {
@@ -43,7 +43,7 @@ const userRegister = async (req, res) => {
       });
       sendError(res, 400, Object.values(errors));
     } else {
-      sendError(res, 400, ["Somethings Went Wrong..!!"]);
+      sendError(res, 400, ["Something Went Wrong."]);
     }
   }
 };
@@ -63,7 +63,7 @@ const userLogin = async (req, res) => {
             200,
             token,
             isUserExit,
-            "User Login SuccessFully..!!"
+            "User Login SuccessFully."
           );
         } else {
           sendError(res, 400, "Invalid Email & Password");
@@ -93,16 +93,16 @@ const changeUserPassword = async (req, res) => {
           await user.save();
           res.status(201).json({
             success: true,
-            message: "Password Updated..!!",
+            message: "Password Updated.",
           });
         } else {
-          sendError(res, 400, "Password: Minimum Four Character");
+          sendError(res, 400, "Password: Minimum Four Character.");
         }
       } else {
-        sendError(res, 400, "Passwords Field Mismatch");
+        sendError(res, 400, "Passwords Field Mismatch.");
       }
     } else {
-      sendError(res, 400, "All Field Required");
+      sendError(res, 400, "All Field Required.");
     }
   } catch (error) {
     console.log(error);
@@ -146,24 +146,24 @@ const sendUserPasswordResetEmail = async (req, res) => {
         await transporter.sendMail({
           from: process.env.SMPT_MAIL,
           to: isUserExit.email,
-          subject: "E-SHOP - Password Reset Link",
-          html: `<h2>Hello ${isUserExit.firstName}</h2><br>
+          subject: "QuickCart - Password Reset Link",
+          html: `<h2>Hello ${isUserExit.firstName},</h2><br>
             <center>
-            <h5>Your Password Reset Link is <a href=${link}>Click Here To Reset Password</a> </h5>
+            <h5>Your Password Reset Link is here. <br/><a href=${link}>Click Here To Reset Password.</a> </h5>
             </center>     `,
         });
         res.status(200).json({
           success: true,
-          message: `Password Reset Link Send To ${isUserExit.email}`,
+          message: `Password Reset Link Sent To ${isUserExit.email}. Please Check Your Mail.`,
         });
       } else {
-        sendError(res, 400, "User Not Exit");
+        sendError(res, 400, "User Does Not Exist.");
       }
     } else {
-      sendError(res, 400, "Email Field Is Required..!!");
+      sendError(res, 400, "Email Field Is Required.");
     }
   } catch (error) {
-    sendError(res, 400, "Please Enter Email");
+    sendError(res, 400, "Please Enter Email.");
   }
 };
 
@@ -182,22 +182,22 @@ const userPasswordReset = async (req, res) => {
           await user.save();
           res.status(200).json({
             success: true,
-            message: "Password Reset SuccessFully..!!",
+            message: "Password Reset SuccessFully.",
           });
         } else {
-          sendError(res, 400, "Password: Minimum Four Character");
+          sendError(res, 400, "Password: Minimum Four Character Required.");
         }
       } else {
-        sendError(res, 400, "Both Password Field Not Match..!!");
+        sendError(res, 400, "Both Password Fields Do Not Match.");
       }
     } else {
-      sendError(res, 400, "All Field Are Required..!!");
+      sendError(res, 400, "All Fields Are Required.");
     }
   } catch (error) {
     if (error.message == "jwt expired") {
       sendError(res, 400, "Invalid Token Or Expired");
     } else {
-      sendError(res, 400, "Something Went To Wrong..!!");
+      sendError(res, 400, "Something Went Wrong.");
     }
   }
 };
@@ -206,7 +206,7 @@ const loggedOutUser = (req, res) => {
   res.cookie("token", null, { expires: new Date(Date.now()), httpOnly: true });
   res.status(200).json({
     success: true,
-    message: "Logged Out Successfully..!!",
+    message: "Logged Out Successfully.",
   });
 };
 
@@ -219,11 +219,11 @@ const adminGetAllUsers = async (req, res) => {
       success: true,
       AllUsers,
       userDocCount,
-      message: "All Orders Get SuccessFully..!!",
+      message: "All Orders Get SuccessFully.",
     });
   } catch (error) {
     console.log(error);
-    sendError(res, 400, "Somethings Went's Wrong..!!");
+    sendError(res, 400, "Something Went Wrong.");
   }
 };
 //Delete Product
@@ -237,17 +237,17 @@ const AdminDeleteUser = async (req, res) => {
         const DeletedUser = await userModel.findByIdAndDelete(userId);
         res.status(200).json({
           success: true,
-          message: "Product Delete SuccessFully..!!",
+          message: "Product Deleted SuccessFully.",
           DeletedUser,
         });
       } else {
-        sendError(res, 400, "User Not Found");
+        sendError(res, 400, "User Not Found.");
       }
     } else {
-      sendError(res, 400, "User Id Not Found");
+      sendError(res, 400, "User Id Not Found.");
     }
   } catch (error) {
-    sendError(res, 400, "Somethings Is Wrong");
+    sendError(res, 400, "Something Is Wrong.");
   }
 };
 
@@ -261,18 +261,18 @@ const adminUpdateUser = async (req, res) => {
         await isUserExit.save();
         res.status(200).json({
           success: true,
-          message: "User Role Updated..!!",
+          message: "User Role Updated.",
           isUserExit,
         });
       } else {
-        sendError(res, 400, "User Not Found..!!");
+        sendError(res, 400, "User Not Found.");
       }
     } else {
-      sendError(res, 400, "User Not Found..!!");
+      sendError(res, 400, "User Not Found.");
     }
   } catch (error) {
     console.log(error.message);
-    sendError(res, 400, "Somethings Went's Wrong..!!");
+    sendError(res, 400, "Something Went Wrong.");
   }
 };
 

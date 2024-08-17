@@ -129,7 +129,7 @@ const Products = () => {
           </h1>
           {productError || categoryError ? (
             <>
-              <NotFoundCart msg={"Something Went's To Wrong"} />
+              <NotFoundCart msg={"Something Went Wrong"} />
               <br />
             </>
           ) : (
@@ -198,7 +198,7 @@ const Products = () => {
 
                   {ApplyError ? (
                     <h6 className="applyFilterError ">
-                      Please Select Filter First..!!
+                      Please Select Filter First.
                     </h6>
                   ) : (
                     ""
@@ -264,7 +264,7 @@ const Products = () => {
                       })}
                   </div>
                 ) : (
-                  <NotFoundCart msg={"Sorry Products Not Found"} />
+                  <NotFoundCart msg={"Sorry, Products Not Found"} />
                 )}
               </div>
             </>

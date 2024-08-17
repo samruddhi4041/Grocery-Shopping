@@ -33,7 +33,7 @@ const OrderList = () => {
             <div className="products-table">
               <table>
                 <thead>
-                  <th>Order Id</th>
+                  <th>Order ID</th>
                   <th>Name</th>
                   <th>Items</th>
                   <th>Amount</th>

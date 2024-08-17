@@ -11,7 +11,7 @@ const addReviews = async (req, res) => {
       isReviewsExist.save();
       res.status(200).json({
         success: true,
-        message: "Review Update..!!",
+        message: "Review Updated.",
       });
     } else {
       const newReviews = await reviewsModel.create({
@@ -21,12 +21,12 @@ const addReviews = async (req, res) => {
       });
       res.status(201).json({
         success: true,
-        message: "Review Added..!!",
+        message: "Review Added.",
       });
     }
   } catch (error) {
     console.log(error.message);
-    sendError(res, 400, "Somethings Went To Wrong..!!");
+    sendError(res, 400, "Somethings Went Wrong.");
   }
 };
 
@@ -42,7 +42,7 @@ const getAllReviews = async (req, res) => {
       reviews,
     });
   } catch (error) {
-    sendError(res, 400, "Somethings Went To Wrong..!!");
+    sendError(res, 400, "Something Went To Wrong.");
   }
 };
 
@@ -58,7 +58,7 @@ const AdminGetAllReviews = async (req, res) => {
       reviews,
     });
   } catch (error) {
-    sendError(res, 400, "Somethings Went To Wrong..!!");
+    sendError(res, 400, "Something Went To Wrong.");
   }
 };
 
@@ -72,17 +72,17 @@ const deleteReview = async (req, res) => {
         const deletedReview = await reviewsModel.findByIdAndDelete(reviewId);
         res.status(200).json({
           success: true,
-          message: "Review Delete SuccessFully..!!",
+          message: "Review Deleted SuccessFully.",
         });
       } else {
-        sendError(res, 400, "Review Not Found");
+        sendError(res, 400, "Review Not Found.");
       }
     } else {
-      sendError(res, 400, "Review Id Not Found");
+      sendError(res, 400, "Review Id Not Found.");
     }
   } catch (error) {
     console.log(error.message);
-    sendError(res, 400, "Somethings Went's Wrong..!!");
+    sendError(res, 400, "Something Went Wrong.");
   }
 };
 

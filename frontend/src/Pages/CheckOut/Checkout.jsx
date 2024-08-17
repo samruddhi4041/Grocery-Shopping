@@ -62,7 +62,7 @@ const Checkout = () => {
       setValidationError("Pin Code Should Be 6 Digit..!!");
     } else {
       if (address.trim().length == 0 || city.trim().length == 0) {
-        setValidationError("All Field Are Required..!!");
+        setValidationError("All Fields Are Required..!!");
       } else {
         setShippingData({
           address,

@@ -49,7 +49,7 @@ const ForgetPassword = () => {
       {loading ? <Loader LoadingName={"Processing Data"} /> : ""}
       <div className="forget-password-container">
         <h1 className="Heading">
-          Forget <span>Password</span>
+          Forgot <span>Password</span>
         </h1>
         {success ? (
           <div className="RegisterSuccess" ref={RegisterSuccess}>

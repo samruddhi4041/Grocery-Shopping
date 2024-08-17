@@ -61,7 +61,7 @@ const AllOrders = () => {
                 <div className="orders-total-cart-price">
                   {orders && orders.length === 0 ? (
                     <h2 className="not-place-order">
-                      You Not Place Any Order Yet..!!
+                      You Have Not Placed Any Order Yet..!!
                     </h2>
                   ) : (
                     <>

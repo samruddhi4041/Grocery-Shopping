@@ -80,7 +80,7 @@ const SignUp = () => {
                 <div className="successLoader">
                   <h3 className="loader-text"></h3>
                 </div>
-                <h1>Register SuccessFully..!!</h1>
+                <h1>Registered SuccessFully..!!</h1>
                 <button
                   onClick={() => {
                     Navigate("/Login");
@@ -101,7 +101,7 @@ const SignUp = () => {
                   <RxLetterCaseCapitalize />
                   <input
                     type="text"
-                    placeholder="Name"
+                    placeholder="First Name"
                     name="firstName"
                     required
                     autoComplete="false"

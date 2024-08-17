@@ -13,7 +13,7 @@ const OrderPlace = () => {
   const { user } = useSelector((state) => state.user);
 
   useEffect(() => {
-    document.title = "Order Place..!!";
+    document.title = "Order Placed..!!";
     localStorage.setItem("userCart", []);
     dispatch({ type: CLEAR_CART_ITEM });
   }, []);
@@ -29,7 +29,7 @@ const OrderPlace = () => {
             </i>
             <div className="order-place-heading">
               <h2>{`Thanks ${user.firstName} `} </h2>
-              <h2>Your Order Is Place SuccessFully..!!</h2>
+              <h2>Your Order Has Been Placed SuccessFully..!!</h2>
             </div>
 
             <div className="order-place-btn">

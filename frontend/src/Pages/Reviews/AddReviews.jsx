@@ -35,7 +35,7 @@ const AddReviews = () => {
         setAddSuccess(data.success);
         setMessage(data.message);
       } else {
-        setValidationError("All Field Are Required..!!");
+        setValidationError("All Fields Are Required..!!");
       }
     } catch (error) {
       setAddLoading(false);
@@ -97,7 +97,7 @@ const AddReviews = () => {
             ></textarea>
 
             {validationError ? (
-              <h4 className="validError">All Field Are Required..!!</h4>
+              <h4 className="validError">All Fields Are Required To Be Filled..!!</h4>
             ) : (
               ""
             )}

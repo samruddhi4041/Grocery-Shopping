@@ -62,7 +62,7 @@ const RestPassword = () => {
       {loading ? <Loader LoadingName={"Processing Data"} /> : ""}
       <div className="forget-password-container">
         <h1 className="Heading">
-          Rest <span>Password</span>
+          Reset <span>Password</span>
         </h1>
         {success ? (
           <div className="RegisterSuccess" ref={RegisterSuccess}>
@@ -122,7 +122,7 @@ const RestPassword = () => {
                 )}
               </div>
               <div className="user-links"></div>
-              <button>Rest Password</button>
+              <button>Reset Password</button>
             </form>
           </div>
         </div>

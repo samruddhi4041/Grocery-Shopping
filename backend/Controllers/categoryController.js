@@ -11,7 +11,7 @@ const addCategory = async (req, res) => {
       categoryName: categoryName,
     });
     if (isCategoryExist) {
-      sendError(res, 400, "Category Already Exist..!!");
+      sendError(res, 400, "Category Already Exists.");
     } else {
       const result = await coludinary.v2.uploader.upload(categoryImage, {
         folder: "category",
@@ -22,7 +22,7 @@ const addCategory = async (req, res) => {
       });
       res.status(201).json({
         success: true,
-        message: "Category Added..!!",
+        message: "Category Added.",
         newCategory,
       });
     }
@@ -37,7 +37,7 @@ const getAllCategories = async (req, res) => {
     const CategoriesCount = await categoryModel.find().countDocuments();
     const Categories = await categoryModel.find();
     if (Categories.length == 0) {
-      sendError(res, 400, "Categories Not Found..!!");
+      sendError(res, 400, "Categories Not Found.");
     } else {
       res.status(200).json({
         success: true,
@@ -47,7 +47,7 @@ const getAllCategories = async (req, res) => {
       });
     }
   } catch (error) {
-    sendError(res, 400, "Something Went To Wrong..!!");
+    sendError(res, 400, "Something Went Wrong.");
   }
 };
 
@@ -63,17 +63,17 @@ const deleteCategory = async (req, res) => {
         );
         res.status(200).json({
           success: true,
-          message: "Category Delete SuccessFully..!!",
+          message: "Category Deleted SuccessFully.",
           DeletedCategory,
         });
       } else {
-        sendError(res, 400, "Category Not Found");
+        sendError(res, 400, "Category Not Found.");
       }
     } else {
-      sendError(res, 400, "Category Id Not Found");
+      sendError(res, 400, "Category Id Not Found.");
     }
   } catch (error) {
-    sendError(res, 400, "Something Went's Wrong..!!");
+    sendError(res, 400, "Something Went Wrong.");
   }
 };
 
@@ -93,22 +93,22 @@ const updateCategory = async (req, res) => {
         await category.save();
         res.status(200).json({
           success: true,
-          message: "Category Updated..!!",
+          message: "Category Updated.",
         });
       } else {
         category.categoryName = req.body.categoryName;
         await category.save();
         res.status(200).json({
           success: true,
-          message: "Category Updated..!!",
+          message: "Category Updated.",
         });
       }
     } else {
-      sendError("Category Id Required..!!");
+      sendError("Category Id Required.");
     }
   } catch (error) {
     console.log(error);
-    sendError(res, 400, "Somethings Went's To Wrong..!!");
+    sendError(res, 400, "Something Went Wrong.");
   }
 };
 

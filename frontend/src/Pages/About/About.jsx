@@ -6,7 +6,13 @@ import "./About.css";
 
 const About = () => {
   const visitInstagram = () => {
-    window.location = "https://instagram.com/khamkar_pradip25";
+    window.location = "https://instagram.com/damn_sam_404";
+  };
+  const visitGitHub = () => {
+    window.location = "https://github.com/samruddhi4040";
+  };
+  const visitLinkedIn = () => {
+    window.location = "https://www.linkedin.com/in/samruddhi-bhosale-73567926a/";
   };
   document.title = "About Us";
   return (
@@ -23,15 +29,20 @@ const About = () => {
             <div>
               <img
                 style={{ width: "15rem", height: "15rem", margin: "2rem 0" }}
-                src="https://res.cloudinary.com/dmcm71zbt/image/upload/v1670126233/avatar/profile-pic_1_tozinc.png"
+                src="https://res.cloudinary.com/dj24clwc2/image/upload/v1715095183/fotor-ai-2024050720355_rxwaov.jpg"
                 alt="Founder"
               />
-              <h1>Pradip Khamkar</h1>
-              <button onClick={visitInstagram}>Visit Instagram</button>
+              <h1>Samruddhi Bhosale</h1>
+              <div className="button-container">
+     <button onClick={visitLinkedIn}>Visit LinkedIn</button></div>
+     <div className="button-container">
+            <button onClick={visitGitHub}>Visit GitHub</button></div>
+            <div className="button-container">
+              <button onClick={visitInstagram}>Visit Instagram</button></div>
               <br />
               <p>
-                This is a sample wesbite made by @Pradip Khamkar. Only with the
-                purpose to Learning MERN Stack
+                This is a MERN stack wesbite made by @Samruddhi Bhosale for the purpose of final year project in partial completion for 
+                <br/>K.V.Pendharkar College of Science, Commerce & Arts.
               </p>
             </div>
           </div>

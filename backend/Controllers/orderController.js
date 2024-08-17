@@ -49,7 +49,7 @@ const getMyOrders = async (req, res) => {
       sendError(res, 400, "Invalid User Id ");
     }
   } catch (error) {
-    sendError(res, 400, "Somethings Is Wrong..!!");
+    sendError(res, 400, "Something Went Wrong.");
   }
 };
 
@@ -64,11 +64,11 @@ const getOrderDetails = async (req, res) => {
         order,
       });
     } else {
-      sendError(res, 400, "Invalid OrderId..!!");
+      sendError(res, 400, "Invalid OrderId.");
     }
   } catch (error) {
     console.log(error.message);
-    sendError(res, 400, "Somethings Is Wrong..!!");
+    sendError(res, 400, "Something Went Wrong.");
   }
 };
 
@@ -84,11 +84,11 @@ const adminAllOrders = async (req, res) => {
       success: true,
       AllOrders,
       OrdersCount,
-      message: "All Orders Get SuccessFully..!!",
+      message: "All Orders Get SuccessFully.",
     });
   } catch (error) {
     console.log(error);
-    sendError(res, 400, "Somethings Went's Wrong..!!");
+    sendError(res, 400, "Something Went Wrong..!!");
   }
 };
 
@@ -102,15 +102,15 @@ const AdminUpdateOrder = async (req, res) => {
       await updatedOrder.save();
       res.status(200).json({
         success: true,
-        message: "Order Updated..!!",
+        message: "Order Updated.",
         updatedOrder,
       });
     } else {
-      sendError(res, 404, "Order Id Not Found");
+      sendError(res, 404, "Order Id Not Found.");
     }
   } catch (error) {
     console.log(error.message);
-    sendError(res, 400, "Somethings Went,s To Wrong..!!");
+    sendError(res, 400, "Something Went To Wrong.");
   }
 };
 

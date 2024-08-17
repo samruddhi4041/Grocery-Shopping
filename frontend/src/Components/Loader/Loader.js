@@ -9,7 +9,7 @@ const Loader = ({ LoadingName }) => {
           <div className="loader-container-animation">
             <h3 className="loader-loading-text"></h3>
           </div>
-          <h1>{LoadingName}..!!</h1>
+          <h1>{LoadingName}.</h1>
         </div>
       </div>
     </>
